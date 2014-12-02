@@ -185,6 +185,8 @@ class XmlParser
         for ($i = 0; $i < $strlen; $i++)
             $string .= chr($arr[$string_offset + 2 + $i * 2]);
 
+        $string = mb_convert_encoding($string, 'UTF-8', 'ASCII');
+        
         return $string;
     }
 
