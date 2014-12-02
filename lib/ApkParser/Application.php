@@ -26,9 +26,23 @@ class Application
     {
         $this->application = $application;
 
-        foreach ($application->activity as $actXml) {
-            $this->activities[] = new Activity($actXml);
+
+//        foreach ($application->activity as $actXml) {
+//            $this->activities[] = new Activity($actXml);
+//        }
+    }
+
+    public function getActivities()
+    {
+        if($this->activities==null)
+        {
+            $this->activities = array();
+            foreach ($this->application->activity as $actXml) {
+                $this->activities[] = new Activity($actXml);
+            }
         }
+
+        return $this->activities;
     }
 
     public function getIcon()
@@ -51,7 +65,7 @@ class Application
     {
         $names = array();
 
-        foreach ($this->activities as $act) {
+        foreach ($this->getActivities() as $act) {
             $names[] = trim($act->getName(), '.');
         }
 
