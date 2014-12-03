@@ -76,4 +76,9 @@ class ParserTest extends PHPUnit_Framework_TestCase
         $expected = array('EBHS');
         $this->assertEquals($resources, $expected);
     }
+
+    public function testNewFiles()
+    {
+        //TODO: Test whether composer picked up the right dependency;
+    }
 }
