@@ -22,7 +22,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/tufanbarisyildirim/php-apk-parser.git"
+            "url": "https://github.com/jingyan/php-apk-parser/php-apk-parser.git"
         }
     ],
     "autoload": {
