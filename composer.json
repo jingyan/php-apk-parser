@@ -30,5 +30,5 @@
             "ApkParser": "lib"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
